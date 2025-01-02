@@ -1,0 +1,834 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+/* =================== ESTILOS NAV =================== */
+
+.nav {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+.cont_nav {
+  background-color: rgba(85, 85, 85, 0.5);
+  padding: 1.2em 4.5em;
+  border-radius: 3.5em;
+  border: solid 1px rgb(140, 140, 140, 0.5);
+  margin-top: 1em;
+  backdrop-filter: blur(5px);
+}
+
+.list_nav {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 2.5em;
+}
+
+.element_nav_link {
+  color: rgb(206, 206, 206);
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 200;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+
+.element_nav_link::before {
+  content: "";
+  background-color: rgb(206, 206, 206);
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.element_nav_link:hover::before {
+  width: 100%;
+}
+
+/* =================== ESTILOS HEADER =================== */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.aux_cont {
+  display: flex;
+  gap: 0.5em;
+  position: relative;
+}
+
+.inicial_txt {
+  color: rgb(206, 206, 206);
+  font-family: "Doto", serif;
+  font-weight: 250;
+  font-size: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  display: block;
+  font-family: "Kaushan Script", serif;
+  margin-top: 5px;
+  color: rgb(255, 197, 197);
+  text-shadow: rgb(255, 197, 197) 0 0 287.8px, rgb(255, 197, 197) 0 0 125.3px,
+    rgb(255, 197, 197) 0 0 75.15px, rgba(255, 197, 197) 0 0 10.9px;
+  font-size: 6rem;
+  position: relative;
+}
+
+.name::before {
+  content: "";
+  background-color: rgb(255, 197, 197);
+  width: 0%;
+  height: 4px;
+  position: absolute;
+  left: 0px;
+  bottom: 20px;
+  z-index: -1;
+  box-shadow: 0 0 287.8px rgb(255, 197, 197), 0 0 125.3px rgb(255, 197, 197),
+    0 0 75.15px rgb(255, 197, 197), 0 0 10.9px rgba(255, 197, 197, 1);
+  animation: outline_anim 0.3s ease forwards 1s;
+  border-radius: 5px;
+}
+
+.flecha {
+  width: 1em;
+  position: absolute;
+  bottom: 0px;
+  animation: flecha_animacion 0.5s ease-in-out infinite alternate;
+  cursor: pointer;
+}
+
+.que_hago_txt {
+  color: rgb(140, 139, 139);
+  font-family: "IBM Plex Sans", serif;
+  font-size: 1.3em;
+  margin-top: 2em;
+  opacity: 0.8;
+  transition: color 0.3s ease;
+  cursor: default;
+  height: 1em;
+}
+
+.que_hago_txt:hover {
+  color: rgb(255, 255, 255);
+}
+
+.icon-name {
+  width: 2.5em;
+  cursor: pointer;
+  transition: scale 0.3s ease;
+  position: absolute;
+  top: 25px;
+  z-index: 100;
+}
+
+.icon-whatsapp-name {
+  left: 15px;
+}
+
+.icon-email-name {
+  right: 15px;
+}
+
+.icon-name:hover {
+  scale: 1.3;
+}
+
+.barra_atravesadora_inicio {
+  width: 100vw;
+  height: 9em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 55%;
+  left: 50%;
+  background-color: rgb(41, 41, 41);
+  opacity: 38%;
+  z-index: -1;
+}
+
+/* =================== ESTILOS SECCION 1 =================== */
+
+.habilidades_section {
+  display: flex;
+  flex-direction: column;
+  padding: 3em;
+  position: relative;
+  align-items: center;
+}
+
+.encabezado {
+  text-align: center;
+  font-family: "Doto", serif;
+  font-weight: 100;
+  color: rgb(255, 255, 255);
+  font-size: clamp(2.5em, 4vw, 4em);
+  animation: flicker 3s infinite alternate;
+}
+
+.tecnologias_que_uso_title {
+  margin-bottom: 1.5em;
+}
+.sobre_mi_title {
+  margin-bottom: 1.5em;
+}
+
+.line_separator {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5),
+    rgb(228, 228, 228) 50%,
+    rgba(0, 0, 0, 0.5)
+  );
+  border: none;
+  height: 1px;
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.4),
+    0 0 50px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2);
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 0px;
+}
+
+.cont_tecnologias > .list_tecnologia {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+}
+
+.element_tecnologias {
+  background-color: rgb(46, 46, 46);
+  border: 1px rgb(94, 94, 94) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  border-radius: 15px;
+  transition: box-shadow 0.5s ease-in-out, all 0.3s ease-in-out;
+  height: 100%;
+}
+
+.tecnologia {
+  width: 5em;
+  height: 5em;
+  pointer-events: none;
+}
+
+.cont_info_habilidades {
+  display: flex;
+  gap: 20em;
+}
+
+.atropos-cont {
+  border-radius: 15px;
+  position: relative;
+}
+
+.html:hover {
+  background-color: rgba(255, 134, 5, 0.185);
+}
+
+.html::before {
+  content: "HTML";
+}
+
+.css:hover {
+  background-color: rgba(0, 47, 255, 0.185);
+}
+.css::before {
+  content: "CSS";
+}
+
+.js:hover {
+  background-color: rgba(255, 255, 0, 0.195);
+}
+
+.js::before {
+  content: "JS";
+}
+
+.react:hover {
+  background-color: rgba(0, 213, 255, 0.195);
+}
+.react::before {
+  content: "React";
+}
+
+.bd:hover {
+  background-color: rgba(255, 255, 255, 0.195);
+}
+
+.bd::before {
+  content: "SQLite";
+}
+
+.python:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 0, 0.195),
+    rgba(0, 255, 255, 0.195)
+  );
+}
+.python::before {
+  content: "Python";
+}
+
+.django:hover {
+  background-color: rgba(33, 159, 2, 0.195);
+}
+.django::before {
+  content: "Django";
+}
+
+.git:hover {
+  background-color: rgba(255, 0, 0, 0.195);
+}
+.git::before {
+  content: "Git";
+}
+
+.github:hover {
+  background-color: rgba(0, 0, 0, 0.195);
+}
+.github::before {
+  content: "GitHub";
+}
+
+.element_tecnologias::before {
+  color: white;
+  font-family: "IBM Plex Sans", serif;
+  position: absolute;
+  scale: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s, transform 0.5s, scale 0.5s;
+}
+
+.element_tecnologias:hover::before {
+  scale: 1;
+  opacity: 1;
+  transform: translateY(40px);
+}
+
+.desc_cont_habilidades {
+  font-size: 2rem;
+  max-width: 30vw;
+  color: rgb(196, 196, 196);
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 200;
+}
+
+.cont_info_desc_habilidades {
+  display: flex;
+  align-items: center;
+}
+/* =================== ESTILOS SECCION 2 =================== */
+
+.sobre_mi_section {
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contotal_data_sobre_mi {
+  display: flex;
+  gap: 1em;
+}
+
+.div_aux_sobre_mi {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.div_aux_sobre_mi_sobreaux {
+  display: flex;
+  gap: 1em;
+}
+.cont_sobre_mi_sobre_mi,
+.cont_sobre_mi_data {
+  max-width: 23vw;
+  min-height: 50vh;
+  padding: 1.5em;
+  border-radius: 0.8em;
+  background-color: rgba(48, 48, 48);
+  border: 1px solid rgb(94, 94, 94);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s ease-in-out, scale 0.2s ease-in-out,
+    opacity 0.8s ease-in-out, transform 0.8s ease-in-out !important;
+}
+
+.cont_sobre_mi_sobre_mi:hover,
+.cont_sobre_mi_data:hover {
+  background-color: rgba(48, 48, 48, 0.8);
+  scale: 1.03;
+}
+
+.cont_manejo_creacion_de_bd_sobre_mi {
+  min-width: 100%;
+}
+
+.texto_sobre_mi {
+  color: rgb(196, 196, 196);
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+
+.subtitulo {
+  color: rgb(196, 196, 196);
+  font-family: "IBM Plex Sans", serif;
+  display: inline-block;
+  font-size: 1.5rem;
+  width: max-content;
+}
+
+.div_aux_icon_name_sobre_mi_seccion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+/* =================== ESTILOS SECCION 3 =================== */
+.contactame_section {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  padding: 1.5em;
+}
+.cont_contactame {
+  background-color: rgb(75, 74, 74);
+  border: 1px solid rgb(94, 94, 94);
+  padding: 1em;
+  display: inline-block;
+  border-radius: 2em;
+  position: relative;
+}
+
+.nm_telefono,
+.email_txt {
+  color: rgb(196, 196, 196);
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 100;
+  font-size: 1.3em;
+}
+
+.email_logo_contactame,
+.whatsapp_logo_contactame {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  z-index: -1;
+  rotate: 35deg;
+}
+
+.whatsapp_logo_contactame {
+  rotate: none;
+  right: -12px;
+}
+
+.action_button {
+  display: inline-flex;
+  cursor: pointer;
+  background-color: rgb(75, 74, 74);
+  border: 1px solid rgb(94, 94, 94);
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease-in-out, scale 0.2s ease-in-out;
+}
+
+.action_button:hover {
+  background-color: rgb(105, 105, 105);
+}
+
+.action_button:active {
+  scale: 0.95;
+}
+
+.cont_contactame_email,
+.cont_contactame_whatsapp {
+  display: flex;
+  gap: 1em;
+}
+.aux_div_contactame {
+  display: flex;
+  gap: 1em;
+}
+/* =================== ESTILOS EXTRA =================== */
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: fixed; /* Fijo para que siga visible en el viewport */
+  pointer-events: none; /* Evita interferencias con clics */
+  transform: translate(-50%, -50%); /* Centrar en el cursor */
+  z-index: 200;
+  transition: scale 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.circle_in_hover {
+  scale: 2;
+  opacity: 0.5;
+}
+
+.circle_out_hover {
+  scale: 1;
+}
+
+[data-aos="custom"].aos-animate.line_separator {
+  animation: outline_anim 1s ease 0.5s forwards;
+}
+
+.nav_icon_minimized {
+  display: none;
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+}
+
+/* =================== NAV MINIMIZADO =================== */
+
+.cont_nav_minimizado {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  background-color: black;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  padding: 3em;
+}
+
+.list_nav_minimizado {
+  list-style: none;
+  gap: 3em;
+  display: flex;
+  flex-direction: column;
+}
+.element_nav_minimizado > a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: "IBM Plex Sans", serif;
+  position: relative;
+}
+
+.nav_min_active {
+  animation: appear_nav 0.5s ease-in-out forwards;
+}
+
+.nav_min_desactive {
+  animation: desappear_nav 0.5s ease-in-out forwards;
+}
+
+/* =================== R-E-S-P-O-N-S-I-V-E =================== */
+
+@media (width <= 1149px) {
+  .cont_info_habilidades {
+    gap: 10em;
+  }
+}
+
+@media (width <= 1064px) {
+  .desc_habilidades {
+    font-size: 1.6rem;
+  }
+}
+
+@media (width <= 994px) {
+  .circle {
+    display: none;
+  }
+}
+
+@media (width <= 950px) {
+  .element_tecnologias {
+    padding: 0.6em;
+  }
+  .tecnologia {
+    width: 4.5em;
+    height: 4.5em;
+  }
+
+  .element_tecnologias:hover::before {
+    scale: 1;
+    opacity: 1;
+    transform: translateY(35px);
+  }
+
+  .element_tecnologias::before {
+    font-size: 0.8em;
+  }
+}
+
+@media (width <= 890px) {
+  .desc_habilidades {
+    font-size: 1.4rem;
+  }
+  .element_tecnologias {
+    padding: 0.4em;
+  }
+  .tecnologia {
+    width: 4em;
+    height: 4em;
+  }
+  .element_tecnologias:hover::before {
+    scale: 1;
+    opacity: 1;
+    transform: translateY(30px);
+  }
+
+  .element_tecnologias::before {
+    font-size: 0.6em;
+  }
+  .cont_info_habilidades {
+    gap: 8em;
+  }
+  .texto_sobre_mi {
+    font-size: 1.2rem;
+  }
+
+  .div_aux_icon_name_sobre_mi_seccion {
+    flex-direction: column;
+  }
+}
+
+@media (width <=770px) {
+  .cont_info_habilidades {
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+  }
+  .cont_info_desc_habilidades {
+    justify-content: center;
+  }
+
+  .desc_cont_habilidades {
+    max-width: none;
+  }
+
+  .element_tecnologias {
+    padding: 0.8em;
+  }
+
+  .tecnologia {
+    width: 5em;
+    height: 5em;
+  }
+  .cont_tecnologias > .list_tecnologia {
+    gap: 3em;
+  }
+
+  .element_tecnologias:hover::before {
+    font-size: 1em;
+  }
+  .element_tecnologias:hover::before {
+    scale: 1;
+    opacity: 1;
+    transform: translateY(40px);
+  }
+}
+
+@media (width <=700px) {
+  .cont_sobre_mi_sobre_mi,
+  .cont_sobre_mi_data {
+    max-width: 35vw;
+  }
+  .inicial_txt {
+    font-size: 5rem;
+  }
+}
+
+@media (width <=660px) {
+  .icon-name {
+    display: none;
+  }
+}
+
+@media (width <=600px) {
+  .element_tecnologias {
+    padding: 0.6em;
+  }
+  .tecnologia {
+    width: 4.5em;
+    height: 4.5em;
+  }
+
+  .element_tecnologias:hover::before {
+    scale: 1;
+    opacity: 1;
+    transform: translateY(35px);
+  }
+
+  .element_tecnologias::before {
+    font-size: 0.7em !important;
+  }
+  .inicial_txt {
+    font-size: 4.5rem;
+  }
+}
+
+@media (width <=550px) {
+  .element_nav {
+    display: none;
+  }
+
+  .nav_icon_minimized {
+    display: block;
+  }
+  .email_txt,
+  .nm_telefono {
+    font-size: 1.1rem;
+  }
+  .contotal_data_sobre_mi {
+    flex-direction: column;
+  }
+  .cont_sobre_mi_sobre_mi {
+    width: 100%;
+    max-width: none;
+  }
+  .cont_sobre_mi_data {
+    width: 100%;
+    max-width: none;
+  }
+  .element_tecnologias {
+    padding: 0.5em;
+  }
+  .tecnologia {
+    width: 4.2em;
+    height: 4.2em;
+  }
+
+  .element_tecnologias:hover::before {
+    scale: 1;
+    opacity: 1;
+    transform: translateY(30px);
+  }
+}
+
+@media (width <= 500px) {
+  .inicial_txt {
+    font-size: 4rem;
+  }
+  .name {
+    font-size: 5.5rem;
+  }
+  .list_tecnologia {
+    gap: 1.8em !important;
+  }
+  .cont_contactame_email,
+  .cont_contactame_whatsapp {
+    flex-direction: column;
+  }
+  .aux_div_contactame {
+    display: flex;
+    gap: 1em;
+  }
+}
+
+@media (width <=460px) {
+  .element_tecnologias:hover::before {
+    scale: 0;
+  }
+  .element_tecnologias {
+    padding: 0.35em;
+  }
+  .tecnologia {
+    width: 4em;
+    height: 4em;
+  }
+
+  .inicial_txt {
+    font-size: 3.5rem;
+  }
+}
+
+@media (width <=400px) {
+  .desc_habilidades {
+    font-size: 1.2rem;
+  }
+  .desc_cont_habilidades {
+    max-width: 90vw;
+  }
+  .list_tecnologia {
+    flex-direction: column;
+    width: 90vw;
+  }
+}
+
+@media (width <=370px) {
+  .inicial_txt {
+    font-size: 2.6rem;
+  }
+  .name {
+    font-size: 4.2rem;
+  }
+  .texto_sobre_mi {
+    font-size: 1rem;
+    text-wrap: wrap;
+  }
+  .que_hago_txt {
+    font-size: 1rem;
+  }
+  .div_aux_sobre_mi_sobreaux {
+    flex-direction: column;
+  }
+  .cont_contactame {
+    width: fit-content;
+  }
+  .email_txt,
+  .nm_telefono {
+    font-size: 0.95rem;
+  }
+}
+
+@media (width <=330px) {
+  .subtitulo {
+    font-size: 1.3rem;
+  }
+  .email_logo_contactame,
+  .whatsapp_logo_contactame {
+    display: none;
+  }
+  .nav_icon_minimized {
+    font-size: 1.5em;
+  }
+  .cont_nav {
+    padding: 1em 4em;
+  }
+  .cont_email_contactame {
+    padding: 0.8em;
+  }
+  .contactame_section {
+    padding: 1em;
+  }
+}
