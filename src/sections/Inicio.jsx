@@ -2,7 +2,9 @@ import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 export default function Inicio() {
   const que_hago_txt = useRef();
+
   useEffect(() => {
+    // Se genera un efecto typed, con la libreria Typed.js
     if (!que_hago_txt.current) return;
     const options = {
       strings: [

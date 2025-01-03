@@ -1,10 +1,9 @@
 export default function Contactame() {
-  function copy_text(txt, ev = null) {
+  function copy_text(txt) {
+    //Copia un texto
     navigator.clipboard
       .writeText(txt)
-      .then(() => console.log(ev))
-      //TODO Hacer que el borde se vuelva rojo
-      .catch((e) => alert("Ha habido un error, vuelve a intentarlo"));
+      .catch((e) => alert(`Ha habido un error: ${e}`));
   }
 
   return (
@@ -22,7 +21,7 @@ export default function Contactame() {
         <div className="aux_div_contactame">
           <div
             className="cont_button_copy action_button hoverable"
-            onClick={(e) => copy_text("andressamaniegosandoval@gmail.com", e)}
+            onClick={() => copy_text("andressamaniegosandoval@gmail.com")}
           >
             <img
               src="/elements/copy.svg"
@@ -53,7 +52,7 @@ export default function Contactame() {
         <div className="aux_div_contactame">
           <div
             className="cont_button_copy action_button hoverable"
-            onClick={(e) => copy_text("+34621085478", e)}
+            onClick={() => copy_text("+34621085478")}
           >
             <img
               src="/elements/copy.svg"

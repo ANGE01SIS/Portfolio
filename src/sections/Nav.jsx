@@ -6,6 +6,9 @@ export default function Nav() {
   const nav_minimized = useRef();
 
   useEffect(() => {
+    // isNavMinActive = True = El nav minimizado va a estar visible
+    // isNavMinActive = False = El nav minimizado NO va a estar visible
+
     if (nav_minimized.current) {
       if (isNavMinActive == true) {
         nav_minimized.current.classList.remove("nav_min_desactive");

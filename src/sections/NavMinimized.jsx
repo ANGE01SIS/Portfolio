@@ -1,7 +1,9 @@
 export default function NavMinimized({ desactivateFunc, _ref }) {
   function exit_nav_min() {
+    //Se usa la función pasada por el prop para cerrar el nav.
     desactivateFunc();
   }
+
   return (
     <nav>
       <div className="cont_nav_minimizado" ref={_ref}>
