@@ -6,7 +6,7 @@ export default function SobreMi() {
         <div className="cont_sobre_mi_sobre_mi hoverable" data-aos="fade-right">
           <div className="div_aux_icon_name_sobre_mi div_aux_icon_name_sobre_mi_seccion hoverable">
             <img
-              src="/public/elements/user.svg"
+              src="/elements/user.svg"
               alt="sobre-mi-icon"
               className="hoverable"
             />
@@ -29,7 +29,7 @@ export default function SobreMi() {
             >
               <div className="div_aux_icon_name_fullstack div_aux_icon_name_sobre_mi_seccion hoverable">
                 <img
-                  src="/public/elements/star.svg"
+                  src="/elements/star.svg"
                   alt="fullstack-icon"
                   className="hoverable"
                 />
@@ -48,7 +48,7 @@ export default function SobreMi() {
             >
               <div className="div_aux_icon_name_apis div_aux_icon_name_sobre_mi_seccion hoverable">
                 <img
-                  src="/public/elements/llave_inglesa.svg"
+                  src="/elements/llave_inglesa.svg"
                   alt="apis-icon"
                   className="hoverable"
                 />
@@ -66,7 +66,7 @@ export default function SobreMi() {
           >
             <div className="div_aux_icon_name_bd div_aux_icon_name_sobre_mi_seccion hoverable">
               <img
-                src="/public/elements/engranajes.svg"
+                src="/elements/engranajes.svg"
                 alt="manejo-bd-icon"
                 className="hoverable"
               />

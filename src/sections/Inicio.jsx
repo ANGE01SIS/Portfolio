@@ -25,14 +25,14 @@ export default function Inicio() {
     <header className="header" id="inicio">
       <a href="#contactame">
         <img
-          src="/public/imgs/whatsapp_logo.svg"
+          src="/imgs/whatsapp_logo.svg"
           alt="whatsapp-logo"
           className="icon-name icon-whatsapp-name hoverable"
         />
       </a>
       <a href="#contactame">
         <img
-          src="/public/imgs/email_logo.svg"
+          src="/imgs/email_logo.svg"
           alt="email-logo"
           className="icon-name icon-email-name hoverable"
         />
@@ -45,7 +45,7 @@ export default function Inicio() {
       <p className="que_hago_txt hoverable" ref={que_hago_txt}></p>
       <a href="#tecnologias">
         <img
-          src="/public/elements/flecha.svg"
+          src="/elements/flecha.svg"
           alt="flecha"
           className="flecha hoverable"
         />

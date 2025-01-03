@@ -14,7 +14,7 @@ export default function Contactame() {
         <div className="cont_email_contactame cont_contactame">
           <span className="email_txt">andressamaniegosandoval@gmail.com</span>
           <img
-            src="/public/imgs/email_logo.svg"
+            src="/imgs/email_logo.svg"
             alt="email-logo"
             className="email_logo_contactame"
           />
@@ -25,7 +25,7 @@ export default function Contactame() {
             onClick={(e) => copy_text("andressamaniegosandoval@gmail.com", e)}
           >
             <img
-              src="/public/elements/copy.svg"
+              src="/elements/copy.svg"
               alt="copy-logo"
               className="hoverable"
             />
@@ -33,7 +33,7 @@ export default function Contactame() {
           <div className="cont_button_send action_button hoverable">
             <a href="mailto:andressamaniegosandoval@gmail.com">
               <img
-                src="/public/elements/send.svg"
+                src="/elements/send.svg"
                 alt="send-logo"
                 className="hoverable"
               />
@@ -45,7 +45,7 @@ export default function Contactame() {
         <div className="cont_numero_contactame cont_contactame">
           <span className="nm_telefono">+34 621 08 54 78</span>
           <img
-            src="/public/imgs/whatsapp_logo.svg"
+            src="/imgs/whatsapp_logo.svg"
             alt="whatsapp-logo"
             className="whatsapp_logo_contactame"
           />
@@ -56,7 +56,7 @@ export default function Contactame() {
             onClick={(e) => copy_text("+34621085478", e)}
           >
             <img
-              src="/public/elements/copy.svg"
+              src="/elements/copy.svg"
               alt="copy-logo"
               className="hoverable"
             />
@@ -67,7 +67,7 @@ export default function Contactame() {
               target="_blank"
             >
               <img
-                src="/public/elements/send.svg"
+                src="/elements/send.svg"
                 alt="send-logo"
                 className="hoverable"
               />

@@ -12,28 +12,28 @@ export default function Habilidades() {
             <ul className="list_frontend list_tecnologia">
               <Card className="element_tecnologias html hoverable">
                 <img
-                  src="/public/imgs/html_logo.svg"
+                  src="/imgs/html_logo.svg"
                   alt="html-logo"
                   className="tecnologia"
                 />
               </Card>
               <Card className="element_tecnologias css hoverable">
                 <img
-                  src="/public/imgs/css_logo.svg"
+                  src="/imgs/css_logo.svg"
                   alt="css-logo"
                   className="tecnologia"
                 />
               </Card>
               <Card className="element_tecnologias js hoverable">
                 <img
-                  src="/public/imgs/js_logo.svg"
+                  src="/imgs/js_logo.svg"
                   alt="js-logo"
                   className="tecnologia"
                 />
               </Card>
               <Card className="element_tecnologias react hoverable">
                 <img
-                  src="/public/imgs/react_logo.svg"
+                  src="/imgs/react_logo.svg"
                   alt="react-logo"
                   className="tecnologia"
                 />
@@ -51,21 +51,21 @@ export default function Habilidades() {
             <ul className="list_backend list_tecnologia">
               <Card className="element_tecnologias bd hoverable">
                 <img
-                  src="/public/imgs/bd_logo.svg"
+                  src="/imgs/bd_logo.svg"
                   alt="bd-logo"
                   className="tecnologia"
                 />
               </Card>
               <Card className="element_tecnologias python hoverable">
                 <img
-                  src="/public/imgs/python_logo.svg"
+                  src="/imgs/python_logo.svg"
                   alt="python-logo"
                   className="tecnologia"
                 />
               </Card>
               <Card className="element_tecnologias django hoverable">
                 <img
-                  src="/public/imgs/django_logo.svg"
+                  src="/imgs/django_logo.svg"
                   alt="django-logo"
                   className="tecnologia"
                 />
@@ -83,14 +83,14 @@ export default function Habilidades() {
             <ul className="list_gestion list_tecnologia">
               <Card className="element_tecnologias git hoverable">
                 <img
-                  src="/public/imgs/git_logo.svg"
+                  src="/imgs/git_logo.svg"
                   alt="git-logo"
                   className="tecnologia"
                 />
               </Card>
               <Card className="element_tecnologias github hoverable">
                 <img
-                  src="/public/imgs/gith_logo.svg"
+                  src="/imgs/gith_logo.svg"
                   alt="github-logo"
                   className="tecnologia"
                 />
