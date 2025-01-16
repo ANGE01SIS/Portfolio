@@ -62,7 +62,7 @@ export default function Contactame() {
           </div>
           <div className="cont_button_send action_button hoverable">
             <a
-              href="https://wa.me/1234567890?text=Hola%20Ángel,%20me%20interesa."
+              href="https://wa.me/621085478?text=Hola%20Ángel,%20me%20interesa."
               target="_blank"
             >
               <img
